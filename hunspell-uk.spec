@@ -8,7 +8,9 @@ License: BSD
 BuildArch: noarch
 
 Requires: hunspell
+%if ! %{defined rhel} && 0%{?fedora} >= 23
 Supplements: (hunspell and langpacks-uk)
+%endif
 
 %description
 Ukrainian hunspell dictionaries.
